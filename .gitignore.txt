@@ -1,0 +1,10 @@
+screenshots/*
+tests/*
+.idea
+ocr_env
+src/build
+src/dist/
+src/icon*
+src/screenshot.png
+src/ScreenOCR.spec
+src/__pycache__
