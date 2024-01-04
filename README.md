@@ -31,15 +31,15 @@ git clone https://this-repository-url
 cd path/to/project/screen_ocr
 # 安装依赖
 pip install -r requirements.txt
-
-# 修改Tesseract安装路径
+```
+### 修改Tesseract安装路径
 
 ```src/ocr.py
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 ## 将后面默认路径修改为实际安装路径
-
-# 生成windows可执行项目
+```
+### 生成windows可执行项目
 
 ```bash
 pyinstaller --icon=src/icon.ico --name="ScreenOCR" --window src/main.py
-
+```
