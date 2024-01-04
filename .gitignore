@@ -8,3 +8,5 @@ src/icon*
 src/screenshot.png
 src/ScreenOCR.spec
 src/__pycache__
+build
+venv

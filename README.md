@@ -12,12 +12,34 @@
 - **搜索功能**：在识别的结果中搜索特定的关键词。
 - **多语言支持**：支持多种语言的文字识别，包括中文。
 
+## 使用指南
+
+预先安装Tesseract-OCR到默认目录C:\Program Files\Tesseract-OCR\ [下载/安装说明](https://tesseract-ocr.github.io/tessdoc/Installation.html)
+
+
+在windows操作系统下，clone项目后，进入path/to/project/screen_ocr/dist/ScreenOCR/
+
+运行ScreenOCR.exe运行程序
+
+
 ## 安装指南
 
-说明如何安装和运行你的项目。这可能包括如何下载源代码、安装必要的依赖等。
+说明生成windows可执行程序。这可能包括如何下载源代码、安装必要的依赖等。
 
 ```bash
-git clone https://your-repository-url
-cd your-project-name
+git clone https://this-repository-url
+cd path/to/project/screen_ocr
 # 安装依赖
 pip install -r requirements.txt
+
+# 修改Tesseract安装路径
+
+```src/ocr.py
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+## 将后面默认路径修改为实际安装路径
+
+# 生成windows可执行项目
+
+```bash
+pyinstaller --icon=src/icon.ico --name="ScreenOCR" --window src/main.py
+

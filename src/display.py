@@ -61,8 +61,23 @@ class InteractiveDisplay:
         else:
             messagebox.showinfo("搜索结果", "未找到包含关键词的文本。")
 
+
 def display_image_and_text(image, text_boxes):
     root = tk.Tk()
     root.title("OCR Result")
     app = InteractiveDisplay(root, image, text_boxes)
     root.mainloop()
+
+
+def show_info_dialog():
+    root = tk.Tk()
+    root.withdraw()  # 隐藏主窗口
+
+    # 设置你想要显示的信息
+    hotkey_info = "使用热键 Ctrl+Shift+X 截图，使用Esc退出"
+    tesseract_info = f"使用前请确保Tesseract已安装在：C:\Program Files\Tesseract-OCR"
+
+    # 弹出消息框
+    messagebox.showinfo("程序已启动", f"{hotkey_info}\n{tesseract_info}")
+
+    root.destroy()  # 关闭窗口

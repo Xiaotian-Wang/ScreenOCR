@@ -30,7 +30,7 @@ def recognize_text_and_draw_boxes(image_path):
     pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
     image = Image.open(image_path)
-    image.save('../screenshots/preprocessed.png')
+    # image.save('../screenshots/preprocessed.png')
     draw = ImageDraw.Draw(image)
     image_preprocessed = preprocess_image(image)
     # 使用image_to_data获取文字和位置信息
